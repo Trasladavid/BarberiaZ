@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+</head>
+
+
+<style>
+
+.calendario{
+
+        display:  flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+</style>
+
+<body>
+
+    <div class="calendario"></div>
+    
+     <div>
+
+
+        <div>
+            <h3>Maniana</h3>
+            
+             <input type="checkbox"  onclick="validarFecha('09:00:00')">
+             <label>9:00AM</label>
+            </br>
+             <input type="checkbox" onclick="validarFecha('10:00:00')">
+             <label>10:00AM</label>
+        </div>
+        <div>
+            <h3>Tarde</h3>
+            
+            <input type="checkbox" onclick="validarFecha('13:00:00')">
+            <label>01:00PM</label>
+        </br>
+            <input type="checkbox" onclick="validarFecha('15:00:00')" >
+            <label>03:00PM</label>
+        </br>
+        <input type="checkbox" onclick="validarFecha('17:00:00')" >
+        <label>05:00PM</label>
+        </div>
+
+        <div>
+            <h3>Noche</h3>
+            
+            <input type="checkbox" onclick="validarFecha('18:00:00')" >
+            <label>6:00PM</label>
+        </br>
+            <input type="checkbox" onclick="validarFecha('20:00:00')" >
+            <label>8:00PM</label>
+        </br>
+        <input type="checkbox" onclick="validarFecha('22:00:00')" >
+        <label>10:00PM</label>      
+        </div>
+     </div>
+    <script>
+
+        let now = new Date();
+        mes = now.getMonth() + 1;
+        year = now.getFullYear();
+        day = now.getDate();
+        function diasEnUnMes(mes, año) {
+            return new Date(año, mes, 0).getDate();
+        }
+
+
+        function darDiaMes(mes){
+            
+        const Meses = [ 
+            "Ene.", 
+            "Feb.", 
+            "Mar.", 
+            "Abr.", 
+            "May.", 
+            "Jun.",
+            "Jul.", 
+            "Ago.", 
+            "Sep.", 
+            "Oct.", 
+            "Nov.", 
+            "Dic."
+];
+
+       return Meses[mes];
+        }
+
+
+        function dibujarCalendario(dia, mes, mesName, year){
+ 
+            document.querySelector(".calendario").innerHTML += `
+            
+               <div class="slider-calendario">
+                  
+                  <button name="${year}-${mes}-${dia}">${dia}</button>
+
+                  <p>${mesName}</p>
+                
+               </div>
+               
+            `; 
+        }
+
+        let siguienteMes = diasEnUnMes(mes, year);
+
+        let cont = 1;
+            
+        for (let i = 0; i < 9; i++) {
+            temp = day + i;
+            let = tempDay = "";
+            let = tempMonth = "";
+            if (temp < siguienteMes) {
+
+                if (temp < 10) {
+                    tempDay = `0${temp}`;
+
+                } else {
+                    tempDay = `${temp}`;
+                }
+
+                if (mes < 10) {
+                    tempMonth = `0${mes}`;
+                } else {
+                    tempMonth = `${mes}`;
+                }
+                console.log("dia", tempDay, "mes", tempMonth, siguienteMes, "Soy el primer mes", darDiaMes(mes));
+                dibujarCalendario(tempDay, tempMonth, darDiaMes(mes), `${year}`); 
+            } else {
+
+                if (mes == 11) {
+                    mes == 0
+                    year = year + 1;
+                }
+
+                let OtroMes = mes + 1;
+
+                if (cont < 10) {
+                    tempDay = `0${cont}`;
+
+                } else {
+                    tempDay = `${cont}`;
+                }
+
+                if (OtroMes < 10) {
+                    tempMonth = `0${OtroMes}`;
+                } else {
+                    tempMonth = `${OtroMes}`;
+                }
+
+                console.log("dia,", tempDay, "mes", tempMonth, "anio", year, "soy el segundo mes", darDiaMes(mes));
+                dibujarCalendario(tempDay, tempMonth, darDiaMes(OtroMes), `${year}`); 
+                cont++;
+
+            }
+
+        }
+
+
+
+        document.querySelector('.calendario').addEventListener('click', (e)=> {
+
+
+         // fecha de la consulta 
+        console.log(e.target.name)
+
+          // peticion javaScript
+
+
+        })
+
+         function validarFecha(e) {
+         
+            // hora de la consulta
+            
+            // hacer la consulta if la hay tiempo disponible para esa fecha se 
+            // asigna avilita aparece el valor continuar
+         alert(e);
+         
+  }
+
+
+    </script>
+</body>
+
+</html>

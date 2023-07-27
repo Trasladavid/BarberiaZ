@@ -1,0 +1,80 @@
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    
+}
+.container{
+    
+    background-image: url("../imgs/barberia.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+  
+   
+}
+
+.log{
+    align-self:center;
+    width: 90%;
+    height: 80vh;
+    height: fit-content;
+}
+
+
+label{
+    background-color: #DBAF68;
+    color: black;
+    width: 90%;
+    height: 2.2em;
+    margin: 0.5em;
+    border-radius: 0.5em;
+}
+.rol{
+    background-color: black;
+    color: #DBAF68;
+}
+div form{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+div form select{
+    height: 2.2em;
+    width: 60%;
+    border-radius: 0.2em;
+    
+}
+
+div form input{
+    height: 2.2em;
+    width: 60%;
+    border-radius: 0.2em;
+}
+
+.botones{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones button{
+    background-color: #3F2500;
+    padding: 0.7em;
+    color: white;
+}
+.botones a{
+    background-color: #3F2500;
+    padding: 0.7em;
+    color: white;
+    text-decoration: none;
+}

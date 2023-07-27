@@ -1,0 +1,52 @@
+
+nav{
+   
+    position: absolute;
+    top: 0px;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1%;
+    padding-right: 1%;
+    border-bottom: 1px solid black;
+    font-weight: 1em;
+}
+nav ul{
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+nav ul li{
+
+    font-size: 1.5em;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 1em;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+   
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    
+    color: #DBAF68;
+}
+.hamburguesa div{
+
+    display: none;
+}
+
+.hamburguesa img{
+    width: 3em;
+    margin-left: 2em;
+}
+
+@media(max-width:600px){
+    nav ul{
+        display: none;
+    }
+}

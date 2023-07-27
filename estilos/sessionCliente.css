@@ -1,0 +1,49 @@
+body{
+    background: linear-gradient(0deg, rgba(217, 169, 107, 0.20) 0%, rgba(217, 169, 107, 0.20) 100%), rgba(7, 8, 12, 0.60);
+}
+
+.openModal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:  1.3em;
+    background-color: #3F2500;
+    color: #fff;
+    
+}
+
+.openModal:hover{
+    background-color: #DBAF68;
+    color: #3F2500;
+}
+.modal{
+    
+    color: #fff;
+
+}
+.close{
+    color: black;
+}
+.reserva{
+   
+    background-color: #07080C;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   align-items: center;
+   text-align: center;
+}
+
+.reserva div{
+    
+    max-width: 30%;
+    margin: 2em;
+
+}
+
+.reserva div img{
+    width: 280px;
+    border-radius: 2px;
+}

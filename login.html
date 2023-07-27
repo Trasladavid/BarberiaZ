@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaman</title>
+
+    <link rel="stylesheet" href="./estilos/menu.css">
+
+    <link rel="stylesheet" href="./estilos/login.css">
+</head>
+<body>
+    
+<div class="container">
+
+  <div>
+    <nav>
+        <div class="hamburguesa">
+            <iconify-icon icon="material-symbols:menu" width="2em"></iconify-icon>
+            <div>
+                <div>Inicio</div>
+                <div>Whatsapp</div>
+                <div>Instagram</div>
+                <div>Facebook</div>
+            
+            </div>
+            <a href="./index.html" ><img src="./imgs/logo.png"  alt="logo"> </a> 
+        </div>
+        
+        <ul>
+            <li> <a href=""><input type="radio"> Contacto</a></li>
+            <li> <a href="./login.html"><input type="radio"> Inicio</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="log">
+
+    <form action="login.php" method="POST">
+
+
+      <label for="" class="rol"> Seleccione el rol</label>
+      <select name="rol">
+        <option value="1">Admin</option>
+        <option value="2">Cliente</option>
+      </select>
+     
+      <label for="">Id Usuario</label>
+      <input type="text" name="id">
+      <label for="">Contasenia</label>
+      <input type="text" name="password">
+      <div class="botones">
+      <a href="./registro.html">Registrar</a> 
+      <button type="submit">Ingresar</button>
+    </div>
+      
+    </form>
+
+  </div>
+
+  </div>
+
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+</html>
